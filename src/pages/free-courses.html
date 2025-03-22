@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Free AI & ML Courses</title>
+    <link rel="stylesheet" href="./../css/tools.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <a href="../../index.html" id="back-home"><i class="fas fa-home"></i> Back to Home</a>
+        <h1>Top Free AI & ML Courses</h1>
+    </header>
+
+    <input type="text" id="search" placeholder="Search courses..." onkeyup="searchCourses()">
+
+    <div class="course-list">
+        <div class="course-item"><i class="fas fa-graduation-cap"></i> <a href="https://www.coursera.org/learn/machine-learning" target="_blank">Machine Learning by Andrew Ng (Coursera)</a></div>
+        <div class="course-item"><i class="fas fa-graduation-cap"></i> <a href="https://cs50.harvard.edu/ai/" target="_blank">CS50's Introduction to AI with Python (Harvard)</a></div>
+        <div class="course-item"><i class="fas fa-graduation-cap"></i> <a href="https://www.udacity.com/course/intro-to-machine-learning--ud120" target="_blank">Intro to Machine Learning (Udacity)</a></div>
+        <div class="course-item"><i class="fas fa-graduation-cap"></i> <a href="https://www.edx.org/course/artificial-intelligence-ai" target="_blank">Artificial Intelligence (Columbia University - edX)</a></div>
+        <div class="course-item"><i class="fas fa-graduation-cap"></i> <a href="https://developers.google.com/machine-learning/crash-course" target="_blank">Google Machine Learning Crash Course</a></div>
+        <div class="course-item"><i class="fas fa-graduation-cap"></i> <a href="https://www.kaggle.com/learn/intro-to-machine-learning" target="_blank">Intro to Machine Learning (Kaggle)</a></div>
+        <div class="course-item"><i class="fas fa-graduation-cap"></i> <a href="https://www.udemy.com/course/machine-learning-fundamentals/" target="_blank">Machine Learning Fundamentals (Udemy - Free Course)</a></div>
+        <div class="course-item"><i class="fas fa-graduation-cap"></i> <a href="https://fast.ai/" target="_blank">Practical Deep Learning for Coders (fast.ai)</a></div>
+        <div class="course-item"><i class="fas fa-graduation-cap"></i> <a href="https://www.youtube.com/playlist?list=PLqYmG7hTraZBiG_XpjnPrSNw-1XAAUtY5" target="_blank">Deep Learning for Beginners (MIT OpenCourseWare)</a></div>
+        <div class="course-item"><i class="fas fa-graduation-cap"></i> <a href="https://www.microsoft.com/en-us/ai/ai-lab" target="_blank">Microsoft AI Lab - Free AI Courses</a></div>
+        <div class="course-item"><i class="fas fa-graduation-cap"></i> <a href="https://www.datacamp.com/courses/introduction-to-python" target="_blank">Introduction to Python for Data Science (DataCamp)</a></div>
+        <div class="course-item"><i class="fas fa-graduation-cap"></i> <a href="https://cs50.harvard.edu/" target="_blank">Harvard CS50 - Intro to Computer Science</a></div>
+        <div class="course-item"><i class="fas fa-graduation-cap"></i> <a href="https://www.youtube.com/playlist?list=PL8Xu96OlfD2McgbLOkHk1WBXjU7GVbIIT" target="_blank">Deep Learning Specialization (Stanford Online)</a></div>
+        <div class="course-item"><i class="fas fa-graduation-cap"></i> <a href="https://www.youtube.com/c/DeepLearningAI" target="_blank">Deep Learning Specialization (DeepLearning.AI)</a></div>
+        <div class="course-item"><i class="fas fa-graduation-cap"></i> <a href="https://www.kaggle.com/learn/data-cleaning" target="_blank">Data Cleaning (Kaggle)</a></div>
+        <div class="course-item"><i class="fas fa-graduation-cap"></i> <a href="https://www.udacity.com/course/deep-learning-nanodegree--nd101" target="_blank">Deep Learning Foundations (Udacity)</a></div>
+        <div class="course-item"><i class="fas fa-graduation-cap"></i> <a href="https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/" target="_blank">Python for Data Science & ML (Udemy - Free Course)</a></div>
+        <div class="course-item"><i class="fas fa-graduation-cap"></i> <a href="https://ai.google/education/" target="_blank">Google AI - Free AI Learning Resources</a></div>
+        <div class="course-item"><i class="fas fa-graduation-cap"></i> <a href="https://openai.com/research" target="_blank">OpenAI Research Papers & Tutorials</a></div>
+        <div class="course-item"><i class="fas fa-graduation-cap"></i> <a href="https://www.youtube.com/playlist?list=PL6Xpj9I5qXYEcOhn7TqghAJ6NAPrNmUBH" target="_blank">Python Machine Learning (Tech With Tim - YouTube)</a></div>
+        <div class="course-item"><i class="fas fa-graduation-cap"></i> <a href="https://www.codecademy.com/learn/machine-learning" target="_blank">Machine Learning (Codecademy - Free Track)</a></div>
+        <div class="course-item"><i class="fas fa-graduation-cap"></i> <a href="https://data-flair.training/blogs/machine-learning-tutorial/" target="_blank">Machine Learning Tutorials (DataFlair)</a></div>
+        <div class="course-item"><i class="fas fa-graduation-cap"></i> <a href="https://www.analyticsvidhya.com/" target="_blank">Analytics Vidhya - Free ML Courses</a></div>
+    </div>
+
+    <script>
+        function searchCourses() {
+            let input = document.getElementById("search").value.toLowerCase();
+            let items = document.getElementsByClassName("course-item");
+
+            for (let i = 0; i < items.length; i++) {
+                let link = items[i].getElementsByTagName("a")[0].innerText.toLowerCase();
+                if (link.includes(input)) {
+                    items[i].style.display = "block";
+                } else {
+                    items[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

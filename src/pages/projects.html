@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Projects</title>
+    <link rel="stylesheet" href="./../css/tools.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="../../index.html" id="back-home"><i class="fas fa-home"></i> Back to Home</a>
+        <h1>Machine Learning Project Repositories</h1>
+    </header>
+
+    <input type="text" id="search" placeholder="Search for ML projects..." onkeyup="searchProjects()">
+
+    <div class="project-list">
+        <div class="project-item"><i class="fab fa-github"></i><a href="https://github.com/ageron/handson-ml"
+                target="_blank">Hands-On ML (GitHub)</a></div>
+        <div class="project-item"><i class="fab fa-kaggle"></i><a
+                href="https://www.kaggle.com/learn/intro-to-machine-learning" target="_blank">Kaggle ML Projects</a>
+        </div>
+        <div class="project-item"><i class="fas fa-database"></i><a href="https://paperswithcode.com/"
+                target="_blank">Papers With Code</a></div>
+        <div class="project-item"><i class="fab fa-google"></i><a href="https://tfhub.dev/" target="_blank">TensorFlow
+                Hub</a></div>
+        <div class="project-item"><i class="fab fa-python"></i><a
+                href="https://scikit-learn.org/stable/auto_examples/index.html" target="_blank">Scikit-Learn
+                Examples</a></div>
+        <div class="project-item"><i class="fas fa-brain"></i><a href="https://pytorch.org/tutorials/"
+                target="_blank">PyTorch Tutorials</a></div>
+        <div class="project-item"><i class="fab fa-aws"></i><a href="https://aws.amazon.com/machine-learning/"
+                target="_blank">AWS ML Projects</a></div>
+        <div class="project-item"><i class="fab fa-microsoft"></i><a
+                href="https://azure.microsoft.com/en-us/services/machine-learning/" target="_blank">Azure ML</a></div>
+        <div class="project-item"><i class="fas fa-robot"></i><a href="https://fastai.fast.ai/"
+                target="_blank">FastAI</a></div>
+        <div class="project-item"><i class="fas fa-tools"></i><a href="https://colab.research.google.com/"
+                target="_blank">Google Colab Projects</a></div>
+        <div class="project-item"><i class="fas fa-chart-line"></i><a href="https://github.com/fastai/fastbook"
+                target="_blank">Fastbook (Deep Learning)</a></div>
+        <div class="project-item"><i class="fas fa-microchip"></i><a href="https://github.com/tensorflow/models"
+                target="_blank">TensorFlow Model Garden</a></div>
+        <div class="project-item"><i class="fab fa-google"></i><a href="https://ai.google/tools/" target="_blank">Google
+                AI Tools</a></div>
+        <div class="project-item"><i class="fas fa-code"></i><a href="https://github.com/huggingface/transformers"
+                target="_blank">Hugging Face Transformers</a></div>
+        <div class="project-item"><i class="fas fa-image"></i><a href="https://github.com/openai/DALL-E"
+                target="_blank">OpenAI DALL·E</a></div>
+        <div class="project-item"><i class="fas fa-music"></i><a href="https://magenta.tensorflow.org/"
+                target="_blank">Magenta (ML for Music)</a></div>
+        <div class="project-item"><i class="fas fa-brain"></i><a href="https://github.com/deepmind"
+                target="_blank">DeepMind AI Research</a></div>
+        <div class="project-item"><i class="fas fa-database"></i><a href="https://github.com/facebookresearch"
+                target="_blank">Facebook AI Research</a></div>
+        <div class="project-item"><i class="fas fa-globe"></i><a href="https://mlcommons.org/en/"
+                target="_blank">MLCommons</a></div>
+        <div class="project-item"><i class="fas fa-brain"></i><a href="https://www.tensorflow.org/tfx"
+                target="_blank">TensorFlow Extended (TFX)</a></div>
+        <div class="project-item"><i class="fas fa-code"></i><a href="https://github.com/mlflow/mlflow"
+                target="_blank">MLflow (ML Lifecycle)</a></div>
+        <div class="project-item"><i class="fas fa-robot"></i><a href="https://github.com/karpathy/micrograd"
+                target="_blank">MicroGrad (ML From Scratch)</a></div>
+        <div class="project-item"><i class="fas fa-vial"></i><a href="https://github.com/explosion/spacy"
+                target="_blank">SpaCy NLP</a></div>
+        <div class="project-item"><i class="fas fa-brain"></i><a href="https://github.com/pycaret/pycaret"
+                target="_blank">PyCaret (Low-Code ML)</a></div>
+    </div>
+
+    <script>
+        function searchProjects() {
+            let input = document.getElementById("search").value.toLowerCase();
+            let items = document.getElementsByClassName("project-item");
+
+            for (let i = 0; i < items.length; i++) {
+                let link = items[i].getElementsByTagName("a")[0].innerText.toLowerCase();
+                if (link.includes(input)) {
+                    items[i].style.display = "block";
+                } else {
+                    items[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

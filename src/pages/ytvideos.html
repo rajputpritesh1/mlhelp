@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top YouTube Channels for AI & ML</title>
+    <link rel="stylesheet" href="./../css/tools.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <a href="../../index.html" id="back-home"><i class="fas fa-home"></i> Back to Home</a>
+        <h1>Top YouTube Channels for AI & ML</h1>
+    </header>
+
+    <input type="text" id="search" placeholder="Search channels..." onkeyup="searchVideos()">
+
+    <div class="video-list">
+        <div class="video-item"><i class="fab fa-youtube"></i><a href="https://www.youtube.com/c/3blue1brown" target="_blank">3Blue1Brown</a></div>
+        <div class="video-item"><i class="fab fa-youtube"></i><a href="https://www.youtube.com/c/TwoMinutePapers" target="_blank">Two Minute Papers</a></div>
+        <div class="video-item"><i class="fab fa-youtube"></i><a href="https://www.youtube.com/c/DeepLearningAI" target="_blank">DeepLearning.AI</a></div>
+        <div class="video-item"><i class="fab fa-youtube"></i><a href="https://www.youtube.com/c/Computerphile" target="_blank">Computerphile</a></div>
+        <div class="video-item"><i class="fab fa-youtube"></i><a href="https://www.youtube.com/c/TensorFlow" target="_blank">TensorFlow</a></div>
+        <div class="video-item"><i class="fab fa-youtube"></i><a href="https://www.youtube.com/c/Kaggle" target="_blank">Kaggle</a></div>
+        <div class="video-item"><i class="fab fa-youtube"></i><a href="https://www.youtube.com/c/StatQuest" target="_blank">StatQuest with Josh Starmer</a></div>
+        <div class="video-item"><i class="fab fa-youtube"></i><a href="https://www.youtube.com/c/TheAIEpiphany" target="_blank">The AI Epiphany</a></div>
+        <div class="video-item"><i class="fab fa-youtube"></i><a href="https://www.youtube.com/c/MarkRober" target="_blank">Mark Rober (AI + Engineering)</a></div>
+        <div class="video-item"><i class="fab fa-youtube"></i><a href="https://www.youtube.com/c/ArxivInsights" target="_blank">Arxiv Insights</a></div>
+        <div class="video-item"><i class="fab fa-youtube"></i><a href="https://www.youtube.com/c/BrandonRohrer" target="_blank">Brandon Rohrer</a></div>
+        <div class="video-item"><i class="fab fa-youtube"></i><a href="https://www.youtube.com/c/AIExplained" target="_blank">AI Explained</a></div>
+        <div class="video-item"><i class="fab fa-youtube"></i><a href="https://www.youtube.com/c/CodeEmporium" target="_blank">Code Emporium</a></div>
+        <div class="video-item"><i class="fab fa-youtube"></i><a href="https://www.youtube.com/c/DrAlanDThompson" target="_blank">Dr. Alan D. Thompson</a></div>
+        <div class="video-item"><i class="fab fa-youtube"></i><a href="https://www.youtube.com/c/yannicKilcher" target="_blank">Yannic Kilcher</a></div>
+        <div class="video-item"><i class="fab fa-youtube"></i><a href="https://www.youtube.com/c/Fireship" target="_blank">Fireship</a></div>
+        <div class="video-item"><i class="fab fa-youtube"></i><a href="https://www.youtube.com/c/Sentdex" target="_blank">Sentdex</a></div>
+        <div class="video-item"><i class="fab fa-youtube"></i><a href="https://www.youtube.com/c/TechWithTim" target="_blank">Tech With Tim</a></div>
+        <div class="video-item"><i class="fab fa-youtube"></i><a href="https://www.youtube.com/c/AndrewNg" target="_blank">Andrew Ng (AI & ML)</a></div>
+        <div class="video-item"><i class="fab fa-youtube"></i><a href="https://www.youtube.com/c/FreeCodeCamp" target="_blank">freeCodeCamp.org</a></div>
+        <div class="video-item"><i class="fab fa-youtube"></i><a href="https://www.youtube.com/c/LexFridman" target="_blank">Lex Fridman Podcast (AI Research)</a></div>
+        <div class="video-item"><i class="fab fa-youtube"></i><a href="https://www.youtube.com/c/CodingTrain" target="_blank">The Coding Train</a></div>
+        <div class="video-item"><i class="fab fa-youtube"></i><a href="https://www.youtube.com/c/GoogleDevelopers" target="_blank">Google Developers</a></div>
+        <div class="video-item"><i class="fab fa-youtube"></i><a href="https://www.youtube.com/c/StanfordOnline" target="_blank">Stanford Online AI Courses</a></div>
+    </div>
+
+    <script>
+        function searchVideos() {
+            let input = document.getElementById("search").value.toLowerCase();
+            let items = document.getElementsByClassName("video-item");
+
+            for (let i = 0; i < items.length; i++) {
+                let link = items[i].getElementsByTagName("a")[0].innerText.toLowerCase();
+                if (link.includes(input)) {
+                    items[i].style.display = "block";
+                } else {
+                    items[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

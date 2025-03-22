@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML & AI Blogs</title>
+    <link rel="stylesheet" href="./../css/tools.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <a href="../../index.html" id="back-home"><i class="fas fa-home"></i> Back to Home</a>
+        <h1>Top Machine Learning & AI Blogs</h1>
+    </header>
+
+    <input type="text" id="search" placeholder="Search blogs..." onkeyup="searchBlogs()">
+
+    <div class="blog-list">
+        <div class="blog-item"><i class="fas fa-blog"></i><a href="https://blog.google/technology/ai/" target="_blank">Google AI Blog</a></div>
+        <div class="blog-item"><i class="fas fa-brain"></i><a href="https://ai.facebook.com/blog/" target="_blank">Facebook AI Blog</a></div>
+        <div class="blog-item"><i class="fas fa-robot"></i><a href="https://www.microsoft.com/en-us/research/blog/" target="_blank">Microsoft Research Blog</a></div>
+        <div class="blog-item"><i class="fas fa-chart-line"></i><a href="https://openai.com/research/" target="_blank">OpenAI Blog</a></div>
+        <div class="blog-item"><i class="fab fa-medium"></i><a href="https://towardsdatascience.com/" target="_blank">Towards Data Science</a></div>
+        <div class="blog-item"><i class="fas fa-code"></i><a href="https://huggingface.co/blog/" target="_blank">Hugging Face Blog</a></div>
+        <div class="blog-item"><i class="fab fa-kaggle"></i><a href="https://www.kaggle.com/tags/blog" target="_blank">Kaggle Blog</a></div>
+        <div class="blog-item"><i class="fas fa-database"></i><a href="https://www.analyticsvidhya.com/blog/" target="_blank">Analytics Vidhya Blog</a></div>
+        <div class="blog-item"><i class="fab fa-python"></i><a href="https://blog.keras.io/" target="_blank">Keras Blog</a></div>
+        <div class="blog-item"><i class="fab fa-google"></i><a href="https://deepmind.com/blog" target="_blank">DeepMind Blog</a></div>
+        <div class="blog-item"><i class="fas fa-rocket"></i><a href="https://ai.googleblog.com/" target="_blank">Google Research Blog</a></div>
+        <div class="blog-item"><i class="fas fa-microchip"></i><a href="https://www.oreilly.com/radar/" target="_blank">O'Reilly AI Radar</a></div>
+        <div class="blog-item"><i class="fas fa-book"></i><a href="https://sebastianraschka.com/blog/" target="_blank">Sebastian Raschka's Blog</a></div>
+        <div class="blog-item"><i class="fas fa-chalkboard-teacher"></i><a href="https://fast.ai/" target="_blank">Fast.ai Blog</a></div>
+        <div class="blog-item"><i class="fas fa-flask"></i><a href="https://distill.pub/" target="_blank">Distill AI Blog</a></div>
+        <div class="blog-item"><i class="fas fa-user"></i><a href="http://karpathy.github.io/" target="_blank">Andrej Karpathy Blog</a></div>
+        <div class="blog-item"><i class="fas fa-lightbulb"></i><a href="https://ml.berkeley.edu/blog/" target="_blank">Berkeley AI Blog</a></div>
+        <div class="blog-item"><i class="fas fa-globe"></i><a href="https://arxiv.org/list/cs.AI/recent" target="_blank">ArXiv AI Blog</a></div>
+        <div class="blog-item"><i class="fas fa-dna"></i><a href="https://thegradient.pub/" target="_blank">The Gradient</a></div>
+        <div class="blog-item"><i class="fas fa-chart-bar"></i><a href="https://blogs.nvidia.com/" target="_blank">NVIDIA AI Blog</a></div>
+        <div class="blog-item"><i class="fas fa-robot"></i><a href="https://ai.facebook.com/research/" target="_blank">Facebook Research</a></div>
+        <div class="blog-item"><i class="fas fa-music"></i><a href="https://magenta.tensorflow.org/" target="_blank">Magenta AI (Music & Art)</a></div>
+        <div class="blog-item"><i class="fas fa-code"></i><a href="https://databricks.com/blog/category/data-science" target="_blank">Databricks Blog</a></div>
+        <div class="blog-item"><i class="fas fa-network-wired"></i><a href="https://blogs.apache.org/machinelearning/" target="_blank">Apache ML Blog</a></div>
+        <div class="blog-item"><i class="fas fa-cloud"></i><a href="https://cloud.google.com/blog/products/ai-machine-learning" target="_blank">Google Cloud AI Blog</a></div>
+        <div class="blog-item"><i class="fas fa-user-astronaut"></i><a href="https://deeplearning.ai/the-batch/" target="_blank">DeepLearning.AI Blog</a></div>
+    </div>
+
+    <script>
+        function searchBlogs() {
+            let input = document.getElementById("search").value.toLowerCase();
+            let items = document.getElementsByClassName("blog-item");
+
+            for (let i = 0; i < items.length; i++) {
+                let link = items[i].getElementsByTagName("a")[0].innerText.toLowerCase();
+                if (link.includes(input)) {
+                    items[i].style.display = "block";
+                } else {
+                    items[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

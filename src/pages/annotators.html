@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dataset Annotators</title>
+    <link rel="stylesheet" href="./../css/tools.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <a href="../../index.html" id="back-home"><i class="fas fa-home"></i> Back to Home</a>
+        <h1>Dataset Annotation Tools</h1>
+    </header>
+
+    <input type="text" id="search" placeholder="Search for an annotation tool..." onkeyup="searchAnnotators()">
+
+    <div class="annotator-list">
+        <div class="annotator-item">
+            <i class="fas fa-pen-fancy"></i>
+            <a href="https://labelbox.com/" target="_blank">Labelbox</a>
+        </div>
+        <div class="annotator-item">
+            <i class="fas fa-draw-polygon"></i>
+            <a href="https://supervise.ly/" target="_blank">Supervisely</a>
+        </div>
+        <div class="annotator-item">
+            <i class="fas fa-mouse-pointer"></i>
+            <a href="https://www.makesense.ai/" target="_blank">MakeSense</a>
+        </div>
+        <div class="annotator-item">
+            <i class="fas fa-robot"></i>
+            <a href="https://www.scale.ai/" target="_blank">Scale AI</a>
+        </div>
+        <div class="annotator-item">
+            <i class="fas fa-tags"></i>
+            <a href="https://www.rectlabel.com/" target="_blank">RectLabel</a>
+        </div>
+        <div class="annotator-item">
+            <i class="fas fa-database"></i>
+            <a href="https://cvat.ai/" target="_blank">CVAT</a>
+        </div>
+        <div class="annotator-item">
+            <i class="fas fa-vector-square"></i>
+            <a href="https://v7labs.com/" target="_blank">V7 Labs</a>
+        </div>
+        <div class="annotator-item">
+            <i class="fas fa-edit"></i>
+            <a href="https://www.dataloop.ai/" target="_blank">Dataloop</a>
+        </div>
+        <div class="annotator-item">
+            <i class="fas fa-brush"></i>
+            <a href="https://playment.io/" target="_blank">Playment</a>
+        </div>
+        <div class="annotator-item">
+            <i class="fas fa-camera"></i>
+            <a href="https://crowdflower.com/" target="_blank">CrowdFlower</a>
+        </div>
+    </div>
+
+    <script>
+        function searchAnnotators() {
+            let input = document.getElementById("search").value.toLowerCase();
+            let items = document.getElementsByClassName("annotator-item");
+
+            for (let i = 0; i < items.length; i++) {
+                let link = items[i].getElementsByTagName("a")[0].innerText.toLowerCase();
+                if (link.includes(input)) {
+                    items[i].style.display = "block";
+                } else {
+                    items[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
