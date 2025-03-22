@@ -24,8 +24,5 @@ MLHelp is a one-stop resource hub for Machine Learning enthusiasts! 🚀 Find da
 ## Contributing
 Feel free to contribute by adding more resources, fixing issues, or improving the design. Open a pull request with your changes.
 
-## License
-This project is open-source and available under the MIT License.
-
 ---
 Made with ❤️ for ML enthusiasts!
